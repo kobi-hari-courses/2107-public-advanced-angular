@@ -10,6 +10,8 @@ import { AComponent } from './shared/components/a/a.component';
 })
 export class AppComponent {
   constructor(@Inject(NAME_TOKEN) public name: string){}
+
+  // change 1
   title = 'fun-with-routing';
 
   stam() {
