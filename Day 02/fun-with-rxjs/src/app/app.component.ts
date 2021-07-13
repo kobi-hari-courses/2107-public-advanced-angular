@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { interval, Observable, Observer, Subject } from 'rxjs';
+import { BehaviorSubject, interval, Observable, Observer, ReplaySubject, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,12 @@ import { interval, Observable, Observer, Subject } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  isShowingCounterPresenter: boolean = true;
+
+  toggleCounter() {
+    this.isShowingCounterPresenter = !this.isShowingCounterPresenter;
+  }
+
   createInterval(): Observable<number> {
     return interval(1000);
   }
@@ -38,6 +44,32 @@ export class AppComponent {
     return subject;
   }
 
+  createCustomBehaviorSubject(): Observable<number> {
+    const subject = new BehaviorSubject<number>(100);
+
+    setTimeout(() => subject.next(200), 2000);
+    setTimeout(() => subject.next(300), 4000);
+    setTimeout(() => subject.next(400), 7000);
+    setTimeout(() => subject.next(500), 8000);
+    setTimeout(() => subject.complete(), 10000);
+
+    return subject;
+  }
+
+  createCustomReplaySubject(): Observable<number> {
+    const subject = new ReplaySubject<number>(1);
+
+    subject.next(100);
+
+    setTimeout(() => subject.next(200), 2000);
+    setTimeout(() => subject.next(300), 4000);
+    setTimeout(() => subject.next(400), 7000);
+    setTimeout(() => subject.next(500), 8000);
+    setTimeout(() => subject.complete(), 10000);
+
+    return subject;
+  }
+
 
   createObserver(id: string): Observer<number> {
     return {
@@ -53,7 +85,7 @@ export class AppComponent {
     const observer1 = this.createObserver('A');
     const observer2 = this.createObserver('B');
 
-    const observable = this.createCustomSubject();
+    const observable = this.createCustomReplaySubject();
 
     observable.subscribe(observer1);
 
