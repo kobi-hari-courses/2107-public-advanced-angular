@@ -1,32 +1,27 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
 import { CounterService } from 'src/app/services/counter.service';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-counter-presenter',
   templateUrl: './counter-presenter.component.html',
-  styleUrls: ['./counter-presenter.component.css']
+  styleUrls: ['./counter-presenter.component.css'], 
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CounterPresenterComponent implements OnInit, OnDestroy {
-  counterValue: number = 0;
-  sub!: Subscription;
+export class CounterPresenterComponent implements OnInit  {
+   counterValue$!: Observable<number>;
+
 
   constructor(
     private counterService: CounterService
   ) { }
 
   ngOnInit(): void {
-    this.sub = this.counterService
-      .getValue()
-      .subscribe(val => {
-        this.counterValue = val;
-        console.log('presenter value changed to ' + val);
-      });
-  }
 
-  ngOnDestroy(): void {
-    this.sub?.unsubscribe();
+    this.counterValue$ = this.counterService.getValue().pipe(
+      tap(val => console.log('counter presented value changed to ' + val))
+    );
   }
-
 
 }
