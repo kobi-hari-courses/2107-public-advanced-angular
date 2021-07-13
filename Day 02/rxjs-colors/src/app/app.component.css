@@ -1,0 +1,35 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    height: 50px;
+    margin: 10px;
+}
+
+.search-area {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    font-size: 36px;
+}
+
+.results-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.result-item {
+    padding: 10px;
+    margin: 10px;
+}
+
+.result-item > span {
+    background-color: rgba(255, 255, 255, 0.602);
+    padding: 4px;
+    border: 1px solid black;
+}

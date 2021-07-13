@@ -1,0 +1,16 @@
+<div class="search-area">
+    <input type="search" #searchBox (input)="search(searchBox.value)">
+    <img 
+        *ngIf="isBusy$ | async"
+        src="https://acegif.com/wp-content/uploads/loading-36.gif">
+
+    <span>Show:</span>
+    <select #paging (input)="setPaging(paging.value)">
+        <option *ngFor="let opt of pagings" [value]="opt">{{opt}}</option>
+    </select>
+</div>
+<div class="results-area">
+    <div class="result-item" *ngFor="let item of (results$ | async)" [style.background]="item.hex">
+        <span>{{item.name}}</span>
+    </div>
+</div>
