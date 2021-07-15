@@ -1,0 +1,23 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+span.step {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 28px;
+    height: 28px;
+    background-color: var(--p-100);
+    margin: 4px;
+    border-radius: 50%;
+    border: 1px solid var(--p-700);
+}
+
+span.seperator {
+    border-top: 1px solid var(--f-divider);
+    flex-grow: 1;
+    height: 1px;
+}

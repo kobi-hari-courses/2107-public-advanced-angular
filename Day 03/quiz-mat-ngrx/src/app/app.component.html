@@ -1,15 +1,14 @@
-<h1>Welcome to material world</h1>
-<div>
-  <button mat-raised-button color="primary">Primary</button>
-  <button mat-raised-button color="accent">Accent</button>
-</div>
-<div class="strong">
-  <button mat-mini-fab color="primary">
-    <mat-icon>home</mat-icon>
-  </button>
-</div>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-icon>palette</mat-icon>
+    <span>Colors Quiz</span>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-<div class="xyz">
-  bla bla bla
-</div>
+<mat-card>
+  <mat-card-content>
+    <app-progress></app-progress>
+  </mat-card-content>
+</mat-card>
 
+<router-outlet></router-outlet>

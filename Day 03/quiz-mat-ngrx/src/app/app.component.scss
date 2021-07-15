@@ -1,25 +1,14 @@
 :host {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+    display: grid;
 }
 
-div {
-    display: flex;
-    flex-direction: row;
-    margin: 12px;
+mat-icon {
+    font-size: 32px;
+    width: auto;
+    height: auto;
+    margin: 8px;
 }
 
-button {
-    align-self: flex-start;
-    margin: 12px;
-}
-
-h1 {
-    color: var(--p-500);
-    text-decoration: underline var(--p-200);
-}
-
-.xyz {
-//    @include main.red-colors(true);
+mat-card {
+    margin: 4px;
 }
