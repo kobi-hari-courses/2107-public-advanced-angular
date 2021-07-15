@@ -1,0 +1,25 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    margin: 12px;
+}
+
+button {
+    align-self: flex-start;
+    margin: 12px;
+}
+
+h1 {
+    color: var(--p-500);
+    text-decoration: underline var(--p-200);
+}
+
+.xyz {
+//    @include main.red-colors(true);
+}
