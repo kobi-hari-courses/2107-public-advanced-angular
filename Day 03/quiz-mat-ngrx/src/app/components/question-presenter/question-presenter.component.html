@@ -5,6 +5,7 @@
             <mat-action-list>
                 <mat-list-item
                     *ngFor="let answer of question.answers; let index = index"
+                    (click)="onAnswer(index)"
                     >
                     <div class="item-content">
                         <span class="index">{{index + 1}}</span>

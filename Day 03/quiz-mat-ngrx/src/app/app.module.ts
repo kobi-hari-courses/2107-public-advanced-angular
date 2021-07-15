@@ -7,6 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module';
 import { ProgressComponent } from './components/progress/progress.component';
 import { QuestionPresenterComponent } from './components/question-presenter/question-presenter.component';
+import { StoreModule } from '@ngrx/store';
+import { appReducer } from './redux/app.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'src/environments/environment';
+import { appFeatureKey } from './redux/app.state';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,14 @@ import { QuestionPresenterComponent } from './components/question-presenter/ques
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule, 
-    AppMaterialModule
+    AppMaterialModule, 
+    StoreModule.forRoot({
+      [appFeatureKey]: appReducer
+    }), 
+    StoreDevtoolsModule.instrument({
+      maxAge: 50, 
+      logOnly: environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
