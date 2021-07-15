@@ -50,4 +50,3 @@ and also - through `Whatsapp`
 - [Material Design](https://material.io/design)
 - [Material Icons Wiki](https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/)
 - [Learn SCSS](https://sass-lang.com/guide)
-- 
