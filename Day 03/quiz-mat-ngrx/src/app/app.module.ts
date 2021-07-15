@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,27 +12,36 @@ import { appReducer } from './redux/app.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { appFeatureKey } from './redux/app.state';
+import { QuizDoneComponent } from './components/quiz-done/quiz-done.component';
+import { RouterLogicService } from './services/router-logic.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProgressComponent,
-    QuestionPresenterComponent
+    QuestionPresenterComponent,
+    QuizDoneComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, 
-    AppMaterialModule, 
+    BrowserAnimationsModule,
+    AppMaterialModule,
     StoreModule.forRoot({
       [appFeatureKey]: appReducer
-    }), 
+    }),
     StoreDevtoolsModule.instrument({
-      maxAge: 50, 
+      maxAge: 50,
       logOnly: environment.production
     })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER, multi: true,
+      deps: [RouterLogicService],
+      useFactory: (service: RouterLogicService) => () => service.start()
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
