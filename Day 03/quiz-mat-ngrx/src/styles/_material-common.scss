@@ -19,6 +19,9 @@ $theme: mat.define-light-theme((
 
 $plt-background: map-get($theme, background);
 $plt-foreground: map-get($theme, foreground);
+$plt-primary-contrast: map-get($plt-primary, contrast);
+$plt-accent-contrast: map-get($plt-accent, contrast);
+$plt-warn-contrast: map-get($plt-warn, contrast);
 
 
 @mixin main() {
@@ -33,8 +36,13 @@ $plt-foreground: map-get($theme, foreground);
         --p-#{$key}: #{map-get($plt-primary, $key)};
       }
 
+
       @each $key, $value in $a-keys {
         --a-#{$key}: #{map-get($plt-accent, $value)};
+      }
+
+      @each $key in $p-keys {
+        --w-#{$key}: #{map-get($plt-warn, $key)};
       }
 
       @each $key, $value in $plt-background {
@@ -44,8 +52,17 @@ $plt-foreground: map-get($theme, foreground);
       @each $key, $value in $plt-foreground {
         --f-#{$key}: #{$value};
       }
-      
 
+      @each $key in $p-keys {
+        --pc-#{$key}: #{map-get($plt-primary-contrast, $key)};
+      }
 
+      @each $key, $value in $a-keys {
+        --ac-#{$key}: #{map-get($plt-accent-contrast, $value)};
+      }
+
+      @each $key in $p-keys {
+        --wc-#{$key}: #{map-get($plt-warn-contrast, $key)};
+      }
     }
 }
