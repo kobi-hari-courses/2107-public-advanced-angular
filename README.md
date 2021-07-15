@@ -45,3 +45,9 @@ and also - through `Whatsapp`
 - [Rx Marbles](https://rxmarbles.com/)
 - [Marbles Visualizer](https://rxviz.com/)
 - [RxJs Introduction Video](https://www.dropbox.com/s/05vsshf61oh5p1y/Reactive%20X.mp4?dl=0)
+- [NgRx](https://ngrx.io/)
+- [Angular Material](https://material.angular.io/)
+- [Material Design](https://material.io/design)
+- [Material Icons Wiki](https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/)
+- [Learn SCSS](https://sass-lang.com/guide)
+- 
