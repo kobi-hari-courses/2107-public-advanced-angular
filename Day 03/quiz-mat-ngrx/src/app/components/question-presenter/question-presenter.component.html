@@ -1,0 +1,17 @@
+<ng-container *ngIf="currentQuestion$ | async as question">
+    <mat-card>
+        <mat-card-title>{{question.caption}}</mat-card-title>
+        <mat-card-content>
+            <mat-action-list>
+                <mat-list-item
+                    *ngFor="let answer of question.answers; let index = index"
+                    >
+                    <div class="item-content">
+                        <span class="index">{{index + 1}}</span>
+                        <span class="answer">{{answer}}</span>
+                    </div>
+                </mat-list-item>
+            </mat-action-list>
+        </mat-card-content>
+    </mat-card>
+</ng-container>
