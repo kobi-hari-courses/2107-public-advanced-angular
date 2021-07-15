@@ -26,6 +26,7 @@ and also - through `Whatsapp`
 ## Daily Summaries
 * [Day 01 Dependency Injection, Modules and Routing](https://github.com/kobi2294/Course-2107-Public/wiki/Day-01-DI-Modules-and-Routing)
 * [Day 02 RxJS](https://github.com/kobi2294/Course-2107-Public/wiki/Day-02-Rxjs)
+* [Day 03 Material and Redux](https://github.com/kobi2294/Course-2107-Public/wiki/Day-03-Material-and-Redux)
 
 ## Practice Projects
 - [Project 1: Angular Pop Quiz](https://github.com/kobi2294/Course-2107-Public/wiki/Project-1---Pop-Quiz)
