@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Joke } from './models/joke.model';
+import { AuthenticationService } from './services/authentication.service';
 import { JokeService } from './services/joke.service';
 
 @Component({
@@ -13,15 +14,23 @@ export class AppComponent implements OnInit {
   joke$!: Observable<Joke>;
   count$!: Observable<number>;
 
+  userToken$!: Observable<string>;
+
   isShowingJokes: boolean= false;
 
   index: number = 0;
 
 
-  constructor(private jokesService: JokeService){}
+  constructor(
+    private jokesService: JokeService, 
+    private auth: AuthenticationService
+    
+    ){}
   ngOnInit(): void {
     this.joke$ = this.jokesService.getCurrentJoke().pipe(map(pair => pair[0]));
     this.count$ = this.jokesService.getCurrentJoke().pipe(map(pair => pair[1]));
+
+    this.userToken$ = this.auth.getToken();
   }
 
   toggleShowingJokes() {
@@ -36,6 +45,14 @@ export class AppComponent implements OnInit {
   prev() {
     this.index--;
     this.jokesService.setCurrentJokeParameters('programming', this.index);
+  }
+
+  login(username: string) {
+    this.auth.login(username);
+  }
+
+  logout() {
+    this.auth.logout();
   }
 
   // go() {

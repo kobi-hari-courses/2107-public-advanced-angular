@@ -24,6 +24,11 @@
     Joke {{index + 1}} / {{count}}
   </pre>
 
-
-
 </ng-container>
+
+
+<input type="text" #usernameInput>
+<button (click)="login(usernameInput.value)">Login</button>
+<button (click)="logout()">Logout</button>
+<hr>
+User Token: {{userToken$ | async}}
