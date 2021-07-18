@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let item of options" 
+        (click)="selectOption(item)"
+        [class.selected]="item === selectedOption"
+        >
+        {{item}}
+    </li>
+</ul>
+
+Selected Option Index: {{selectedIndex}}

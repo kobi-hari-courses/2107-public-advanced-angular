@@ -1,0 +1,25 @@
+:host {
+
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+    border: 1px solid lightgray;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: lightgray;
+}
+
+li.selected {
+    background-color: lightgreen;
+}
