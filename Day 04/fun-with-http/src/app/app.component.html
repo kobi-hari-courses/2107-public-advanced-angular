@@ -1,0 +1,29 @@
+<ng-container *ngIf="count$ | async as count">
+  <button *ngIf="index < count - 1" (click)="next()">Next!</button>
+  <button *ngIf="index > 0" (click)="prev()">Prev!</button>
+  <button (click)="toggleShowingJokes()">Toggle Jokes</button>
+
+
+
+  <hr>
+
+  <ng-container *ngIf="isShowingJokes">
+    <pre>
+    {{joke$ | async | json}}
+  </pre>
+
+    <hr>
+
+    <pre>
+    {{joke$ | async | json}}
+  </pre>
+
+  </ng-container>
+
+  <pre>
+    Joke {{index + 1}} / {{count}}
+  </pre>
+
+
+
+</ng-container>
