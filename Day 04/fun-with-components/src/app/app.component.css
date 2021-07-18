@@ -1,0 +1,15 @@
+li {
+    text-decoration: underline red;
+}
+
+.x {
+    border: 1px solid green;
+}
+
+[type="number"] {
+    background-color: yellow;
+}
+
+[rotate] {
+    transform: rotate(45deg);
+}

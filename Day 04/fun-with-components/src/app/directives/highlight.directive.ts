@@ -1,7 +1,7 @@
 import { Directive, ElementRef, EventEmitter, HostBinding, HostListener, Input, OnDestroy, OnInit, Output, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[highlight]', 
+  selector: '[highlight], .hl', 
   exportAs: 'highlight'
 })
 export class HighlightDirective implements OnInit, OnDestroy {

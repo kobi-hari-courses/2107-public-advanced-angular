@@ -8,6 +8,8 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { StamComponent } from './components/stam/stam.component';
 import { ExpanderHeaderDirective } from './components/expander/expander-header.directive';
 import { ExpanderButtonDirective } from './components/expander/expander-button.directive';
+import { MyListComponent } from './components/my-list/my-list.component';
+import { MyItemComponent } from './components/my-item/my-item.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,7 @@ import { ExpanderButtonDirective } from './components/expander/expander-button.d
     HighlightDirective,
     StamComponent, 
     ExpanderHeaderDirective, 
-    ExpanderButtonDirective
+    ExpanderButtonDirective, MyListComponent, MyItemComponent
   ],
   imports: [
     BrowserModule

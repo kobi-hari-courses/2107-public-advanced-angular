@@ -18,13 +18,13 @@ export class ExpanderComponent implements OnInit, AfterContentInit {
 
   constructor(private renderer: Renderer2) { }
   ngAfterContentInit(): void {
-    console.log('after content init, my toggle button is: ', this.toggleButtonDirective);
+    // console.log('after content init, my toggle button is: ', this.toggleButtonDirective);
 
-    if ((this.toggleButtonDirective) && (this.toggleButtonDirective.elem)) {
-      this.renderer.listen(this.toggleButtonDirective.elem.nativeElement, 'click', () => {
-        this.toggle();
-      })
-    }
+    // if ((this.toggleButtonDirective) && (this.toggleButtonDirective.elem)) {
+    //   this.renderer.listen(this.toggleButtonDirective.elem.nativeElement, 'click', () => {
+    //     this.toggle();
+    //   })
+    // }
 
   }
 
