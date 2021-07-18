@@ -1,0 +1,12 @@
+<div class="header">
+    <div>
+        <ng-content select="#expanderButton"></ng-content>        
+    </div>
+    <div>
+        <ng-content select="[expander-header]"></ng-content>
+    </div>
+</div>
+
+<div class="body" [class.is-closed]="!isOpen">
+    <ng-content></ng-content>
+</div>

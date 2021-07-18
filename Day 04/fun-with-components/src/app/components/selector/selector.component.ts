@@ -33,6 +33,8 @@ export class SelectorComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
+    console.log('Selector is initialized');
+    console.log('the options are: ', this.options);
   }
 
   selectOption(option: string) {

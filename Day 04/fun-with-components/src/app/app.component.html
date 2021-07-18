@@ -1,4 +1,4 @@
-<app-selector [options]="colors" (selection)="onSelect($event)" [selectedOption]="selectedColor">
+<!-- <app-selector [options]="colors" (selection)="onSelect($event)" [selectedOption]="selectedColor">
 
 </app-selector>
 
@@ -6,4 +6,11 @@
 
 <app-selector [options]="colors" (selection)="onSelect($event)" [selectedOption]="selectedColor">
 
-</app-selector>
+</app-selector> -->
+
+
+<app-expander>
+    <button #expanderButton>Toggle</button>
+    <span expander-header>This is the title</span>
+    <p>This is the content of the expander</p>
+</app-expander>
