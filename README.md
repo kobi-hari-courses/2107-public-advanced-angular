@@ -26,6 +26,7 @@ and also - through `Whatsapp`
 ## Daily Summaries
 * [Day 01 Dependency Injection, Modules and Routing](https://github.com/kobi2294/Course-2107-Public/wiki/Day-01-DI-Modules-and-Routing)
 * [Day 02 RxJS](https://github.com/kobi2294/Course-2107-Public/wiki/Day-02-Rxjs)
+* [Day 03 Material and Redux](https://github.com/kobi2294/Course-2107-Public/wiki/Day-03-Material-and-Redux)
 
 ## Practice Projects
 - [Project 1: Angular Pop Quiz](https://github.com/kobi2294/Course-2107-Public/wiki/Project-1---Pop-Quiz)
@@ -44,3 +45,8 @@ and also - through `Whatsapp`
 - [Rx Marbles](https://rxmarbles.com/)
 - [Marbles Visualizer](https://rxviz.com/)
 - [RxJs Introduction Video](https://www.dropbox.com/s/05vsshf61oh5p1y/Reactive%20X.mp4?dl=0)
+- [NgRx](https://ngrx.io/)
+- [Angular Material](https://material.angular.io/)
+- [Material Design](https://material.io/design)
+- [Material Icons Wiki](https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/)
+- [Learn SCSS](https://sass-lang.com/guide)
