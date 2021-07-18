@@ -1,9 +1,32 @@
-<app-expander #exp1>    
+<ng-template #colorItem let-item>
+    <span [style.color]="item">{{item}}</span>
+</ng-template>
+
+<ng-template #sizeItem let-item>
+    <span [style.font-size]="item">{{item}}</span>
+</ng-template>
+
+<app-selector [options]="colors" [selectedOption]="selectedColor" 
+    (selection)="onSelectColor($event)" [itemTemplate]="colorItem"></app-selector>
+
+<app-selector [options]="sizes" [selectedOption]="selectedSize" 
+    (selection)="onSelectSize($event)" [itemTemplate]="sizeItem"></app-selector>
+
+
+
+
+<!-- <app-container-demo></app-container-demo> -->
+
+<!-- <app-templates-demo></app-templates-demo> -->
+
+<!-- <app-expander #exp1>    
     <span expander-header>Title</span>
     <button expander-button>{{exp1.isOpen ? '-' : '+'}}</button>
     <div expander-button>blablabla</div>
     <span>Content</span>
-</app-expander>
+</app-expander>  -->
+
+<!--
 
 <app-my-list>
     <li my-item>Option 1</li>
@@ -35,9 +58,6 @@
 <input type="text" rotate>
 
 
-
-
-<!-- 
 
 
 <h1 highlight="yellow">

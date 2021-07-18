@@ -7,12 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   colors = ['red', 'green', 'blue', 'purple', 'brown', 'teal'];
+  sizes = ['18px', '24px', '36px', '48px'];
 
   selectedColor = this.colors[0];
+  selectedSize = this.sizes[0];
 
-  onSelect(color: string) {
+  onSelectColor(color: string) {
     console.log('Selected color: ' + color);
     this.selectedColor = color;
+  }
+
+  onSelectSize(size: string) {
+    this.selectedSize = size;
   }
 
   onHighlightHidden() {

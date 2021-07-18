@@ -12,6 +12,7 @@ export class StamComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Stam was created');
   }
 
 }

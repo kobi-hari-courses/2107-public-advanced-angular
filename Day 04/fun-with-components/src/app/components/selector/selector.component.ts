@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-selector',
@@ -18,6 +18,9 @@ export class SelectorComponent implements OnInit, OnChanges {
     this._selectedOption = value;
     this.selectedIndex = this.options.indexOf(this._selectedOption);
   }
+
+  @Input()
+  itemTemplate: TemplateRef<any> | undefined;
 
   selectedIndex = 0;
 

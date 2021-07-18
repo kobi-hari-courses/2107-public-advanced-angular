@@ -1,9 +1,15 @@
+<ng-template #defaultTemplate let-item>
+    {{item}}
+</ng-template>
+
 <ul>
     <li *ngFor="let item of options" 
         (click)="selectOption(item)"
         [class.selected]="item === selectedOption"
         >
-        {{item}}
+        <ng-container *ngTemplateOutlet="itemTemplate || defaultTemplate; context: {$implicit: item}">
+
+        </ng-container>
     </li>
 </ul>
 

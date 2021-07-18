@@ -10,6 +10,8 @@ import { ExpanderHeaderDirective } from './components/expander/expander-header.d
 import { ExpanderButtonDirective } from './components/expander/expander-button.directive';
 import { MyListComponent } from './components/my-list/my-list.component';
 import { MyItemComponent } from './components/my-item/my-item.component';
+import { ContainerDemoComponent } from './components/container-demo/container-demo.component';
+import { TemplatesDemoComponent } from './components/templates-demo/templates-demo.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,7 @@ import { MyItemComponent } from './components/my-item/my-item.component';
     HighlightDirective,
     StamComponent, 
     ExpanderHeaderDirective, 
-    ExpanderButtonDirective, MyListComponent, MyItemComponent
+    ExpanderButtonDirective, MyListComponent, MyItemComponent, ContainerDemoComponent, TemplatesDemoComponent
   ],
   imports: [
     BrowserModule
