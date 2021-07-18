@@ -1,16 +1,38 @@
-<!-- <app-selector [options]="colors" (selection)="onSelect($event)" [selectedOption]="selectedColor">
-
-</app-selector>
-
-<hr>
-
-<app-selector [options]="colors" (selection)="onSelect($event)" [selectedOption]="selectedColor">
-
-</app-selector> -->
-
-
-<app-expander>
-    <button #expanderButton>Toggle</button>
-    <span expander-header>This is the title</span>
-    <p>This is the content of the expander</p>
+<app-expander #exp1>    
+    <span expander-header>Title</span>
+    <button expander-button>{{exp1.isOpen ? '-' : '+'}}</button>
+    <span>Content</span>
 </app-expander>
+
+
+
+
+<!-- 
+
+
+<h1 highlight="yellow">
+    Hello Directives
+</h1>
+
+
+<h2>
+    Agenda
+</h2>
+
+<app-stam highlight="lime" (highlightHidden)="onHighlightHidden()" #comp #dirc="highlight">
+    <p>
+        This is only a test
+    </p>
+</app-stam>
+
+<button (click)="dirc.reset()">AUDIT</button>
+
+<ul>
+    <li>What are directives</li>
+    <li>How to use ElementRef</li>
+    <li highlight>How to use the Renderrer 2</li>
+    <li>HostBinding HostListener</li>
+    <li>Inputs and Outputs</li>
+    <li highlight>Input with the same name as the directive trick</li>
+    <li>Export As</li>    
+</ul> -->

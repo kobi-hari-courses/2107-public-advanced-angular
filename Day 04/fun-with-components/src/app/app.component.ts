@@ -14,4 +14,12 @@ export class AppComponent {
     console.log('Selected color: ' + color);
     this.selectedColor = color;
   }
+
+  onHighlightHidden() {
+    console.log('Highlight was clicked and hidden');
+  }
+
+  audit(mashu: any) {
+    console.log(mashu);
+  }
 }
