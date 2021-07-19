@@ -1,0 +1,51 @@
+<h1>Welcome to templates</h1>
+
+<button (click)="toggle()">Toggle Showing</button>
+
+<div *ngIf="isShowing">
+  <p>I am now showing something conditioanlly</p>
+</div>
+
+<ng-template [ngIf]="isShowing">
+  <div>
+    <p>I am now showing something conditioanlly (2)</p>
+  </div>
+</ng-template>
+
+<hr>
+
+<ng-template [myIf]="isShowing">
+  <div>
+    <p>I am now showing something conditioanlly (3)</p>
+  </div>
+</ng-template>
+
+<div *myIf="isShowing">
+  <p>I am now showing something conditioanlly (4)</p>
+</div>
+
+<!-- TODO
+<div *myRepeat="let counter times 4">
+  <p>{{counter}} this</p>
+</div> -->
+
+<hr>
+
+<input type="text" #colorInput>
+<button (click)="addColor(colorInput.value)">Add Color</button>
+
+<ul>
+  <li *ngFor="let clr of colors; let i = index; let o = odd" [style.color]="clr" [class.odd]="o">
+    {{i}}: {{clr}}
+  </li>
+</ul>
+
+<hr>
+
+<ul>
+  <ng-template ngFor let-clr [ngForOf]="colors" let-i="index" let-o="odd">
+    <li [style.color]="clr" [class.odd]="o">
+      {{i}}: {{clr}}
+    </li>  
+  </ng-template>
+</ul>
