@@ -18,10 +18,12 @@ and also - through `Whatsapp`
 * Day 04
     - Advanced Http
     - Advanced Component authoring
+    - Advanced Directives authoring
 * Day 05
-    - Advanced Directives
-    - Angular Templates in Depth
+    - DOM manupulation in angular using `ViewContainerRef`
+    - Angular Templates in depth
     - Custom Structural Directives and the Microsyntax
+    - Custom Control Value Accessors
 
 ## Daily Summaries
 * [Day 01 Dependency Injection, Modules and Routing](https://github.com/kobi2294/Course-2107-Public/wiki/Day-01-DI-Modules-and-Routing)
