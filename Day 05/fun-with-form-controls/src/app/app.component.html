@@ -1,0 +1,29 @@
+<div class="form" [formGroup]="form">
+  <div class="field">
+    <label>Display Name</label>
+    <input type="text" formControlName="displayName">
+  </div>
+  <div class="field">
+    <label>Age</label>
+    <app-number-spinner [change]="20" formControlName="age"></app-number-spinner>
+  </div>
+  <div class="field">
+    <label>Nickname</label>
+    <input type="text" formControlName="nickname">
+  </div>
+  <div class="field">
+    <label>Favorite Color</label>
+    <app-color-picker formControlName="favoriteColor"></app-color-picker>
+  </div>
+</div>
+
+<button (click)="toggleFormDisabled()">Toggle Disable/Enable form</button>
+
+<pre>
+  {{form.value | json}}
+</pre>
+
+<h2>Age Errors</h2>
+<pre>
+  {{form.get('age')?.errors | json}}
+</pre>

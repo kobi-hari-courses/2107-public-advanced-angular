@@ -1,4 +1,47 @@
-<h1>Welcome to templates</h1>
+<app-selector 
+  [options]="colors" [selectedOption]="selectedColor" 
+  (selection)="selectColor($event)">
+  <span *selectorItem="let item" [style.color]="item">{{item}}</span>
+</app-selector>
+
+
+  <hr>
+
+
+  <app-selector 
+    [options]="fonts" [selectedOption]="selectedFont" 
+    (selection)="selectFont($event)">
+    <span *selectorItem="let item" [style.font-family]="item">{{item}}</span>
+  </app-selector>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h1>Welcome to templates</h1>
 
 <button (click)="toggle()">Toggle Showing</button>
 
@@ -22,7 +65,7 @@
 
 <div *myIf="isShowing">
   <p>I am now showing something conditioanlly (4)</p>
-</div>
+</div> -->
 
 <!--
   When angular sees a *directive
@@ -31,7 +74,7 @@
   3. goes over all "let" statements in the microsyntax and converts them to let-x="y"
 
 -->
-<h1>Repeater explicit syntax</h1>
+<!-- <h1>Repeater explicit syntax</h1>
 
 <label>How many items</label>
 <input type="number" #inputTimes>
@@ -76,4 +119,4 @@
       {{i}}: {{clr}}
     </li>
   </ng-template>
-</ul>
+</ul> -->

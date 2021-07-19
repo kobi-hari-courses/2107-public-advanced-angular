@@ -1,0 +1,18 @@
+<ng-container [formGroup]="form">
+    <div class="field">
+        <label>Red</label>
+        <input type="range" min="0" max="255" formControlName="red">
+    </div>
+    <div class="field">
+        <label>Green</label>
+        <input type="range" min="0" max="255"  formControlName="green">
+    </div>
+    <div class="field">
+        <label>Blue</label>
+        <input type="range" min="0" max="255"  formControlName="blue">
+    </div>    
+</ng-container>
+
+<div class="preview" [style.background]="currentValue$ | async">
+
+</div>

@@ -22,11 +22,25 @@ export class AppComponent {
 
   colors = ['red', 'blue', 'green', 'purple', 'teal', 'black'];
 
+  selectedColor = this.colors[0];
+
+  fonts = ['Verdana', 'Times new Roman', 'Consolas', 'Arial', 'Segoe UI', 'Tahoma'];
+
+  selectedFont = this.fonts[0];
+
   toggle() {
     this.isShowing = !this.isShowing;
   }
 
   addColor(color: string) {
     this.colors.push(color);
+  }
+
+  selectColor(color: string) {
+    this.selectedColor = color;
+  }
+
+  selectFont(font: string) {
+    this.selectedFont = font;
   }
 }

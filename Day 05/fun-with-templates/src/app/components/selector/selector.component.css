@@ -1,0 +1,17 @@
+li {
+    list-style: none;
+    padding: 4px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin: 4px;
+    max-width: 400px;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: lightgrey;
+}
+
+li.selected {
+    background-color: lightgreen;
+}
