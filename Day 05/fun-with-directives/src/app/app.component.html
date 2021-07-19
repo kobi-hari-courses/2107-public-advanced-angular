@@ -10,20 +10,21 @@
   How are you, I am a div
 </div>
 
-<ng-template #template1 let-color>
+<ng-template #template1 let-color="color" let-caption="title" let-num>
   <h1>I am a template</h1>
   <h2 [style.color]="color">Second title</h2>
+  <h3>{{caption}}</h3>
 </ng-template>
 
 <pre>
   template outlets start here: ------>
 </pre>
-<ng-container *ngTemplateOutlet="template1; context: {$implicit: 'purple'}">
+<ng-container *ngTemplateOutlet="template1; context: {$implicit: 1, color: 'purple', title: 'This is caption number 1'}">
 </ng-container>
 
 <ng-container 
   [ngTemplateOutlet]="template1"
-  [ngTemplateOutletContext]="{$implicit: 'brown'}"
+  [ngTemplateOutletContext]="{color: 'brown'}"
 ></ng-container>
 
 <pre>

@@ -54,10 +54,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     // this.renderer.setStyle(this.host.nativeElement, 'background-color', 'lime');
     // this.renderer.setStyle(this.spanElem.nativeElement, 'background-color', 'pink');
 
-    const embeddedView1: EmbeddedViewRef<any> = this.myTemplate.createEmbeddedView({$implicit: 'blue'});
+    const embeddedView1: EmbeddedViewRef<any> = this.myTemplate.createEmbeddedView({color: 'blue'});
     this.hostVcr.insert(embeddedView1);
 
-    const embeddedView2: EmbeddedViewRef<any> = this.myTemplate.createEmbeddedView({$implicit: 'red'});
+    const embeddedView2: EmbeddedViewRef<any> = this.myTemplate.createEmbeddedView({color: 'red'});
     this.hostVcr.insert(embeddedView2);
 
   }
