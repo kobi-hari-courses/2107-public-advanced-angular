@@ -24,10 +24,38 @@
   <p>I am now showing something conditioanlly (4)</p>
 </div>
 
-<!-- TODO
-<div *myRepeat="let counter times 4">
-  <p>{{counter}} this</p>
-</div> -->
+<!--
+  When angular sees a *directive
+  1. wraps it with <ng-template>
+  2. places the directive on the ng-template without *
+  3. goes over all "let" statements in the microsyntax and converts them to let-x="y"
+
+-->
+<h1>Repeater explicit syntax</h1>
+
+<label>How many items</label>
+<input type="number" #inputTimes>
+<label>Skip by</label>
+<input type="number" #inputSkipBy>
+<label>Start with: </label>
+<input type="number" #inputStartWith>
+<button (click)="setRepeaterValues(inputTimes.valueAsNumber, inputSkipBy.valueAsNumber, inputStartWith.valueAsNumber)">SET!</button>
+
+<ul>
+  <ng-template myRepeat let-counter let-odd="isOdd" let-first="isFirst" let-last="isLast" [myRepeatTimes]="howManyItems"
+    [myRepeatSkip]="skipper" [myRepeatStartWith]="theStartIndex">
+    <li>Index = {{counter}}, Odd = {{odd}}, First = {{first}}, Last = {{last}}</li>
+  </ng-template>
+
+</ul>
+
+<h1>Repeater * syntax</h1>
+<ul>
+  <li
+    *myRepeat="let counter times howManyItems skip skipper startWith theStartIndex; let odd = isOdd, let first = isFirst, let last = isLast">
+    Index = {{counter}}, Odd = {{odd}}, First = {{first}}, Last = {{last}}</li>
+</ul>
+
 
 <hr>
 
@@ -46,6 +74,6 @@
   <ng-template ngFor let-clr [ngForOf]="colors" let-i="index" let-o="odd">
     <li [style.color]="clr" [class.odd]="o">
       {{i}}: {{clr}}
-    </li>  
+    </li>
   </ng-template>
 </ul>
