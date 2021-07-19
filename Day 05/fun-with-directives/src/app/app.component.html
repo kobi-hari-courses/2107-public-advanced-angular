@@ -1,0 +1,19 @@
+<ng-container #myContainer>
+
+</ng-container>
+
+<span #sp1>
+  Hello World
+</span>
+
+<div #dv1>
+  How are you, I am a div
+</div>
+
+<ng-template #template1 let-color>
+  <h1>I am a template</h1>
+  <h2 [style.color]="color">Second title</h2>
+</ng-template>
+
+<button (click)="addChip()">Add Chip</button>
+<button (click)="addChip('HELLO WORLD')">Add Hello chip</button>

@@ -1,0 +1,10 @@
+:host {
+    display: flex;
+}
+
+div {
+    border-radius: 12px;
+    height: 24px;
+    background-color: lightgray;
+    padding: 2px;
+}
