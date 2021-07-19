@@ -28,6 +28,7 @@ and also - through `Whatsapp`
 * [Day 02 RxJS](https://github.com/kobi2294/Course-2107-Public/wiki/Day-02-Rxjs)
 * [Day 03 Material and Redux](https://github.com/kobi2294/Course-2107-Public/wiki/Day-03-Material-and-Redux)
 * [Day 04 Http, Components and Directives](https://github.com/kobi2294/Course-2107-Public/wiki/Day-04-Http-and-Components-and-Directives)
+* [Day 05 Structural Directives, Control Value Accessors](https://github.com/kobi2294/Course-2107-Public/wiki/Day-05-Structural-Directives-and-Control-Value-Accessor)
 
 ## Practice Projects
 - [Project 1: Angular Pop Quiz](https://github.com/kobi2294/Course-2107-Public/wiki/Project-1---Pop-Quiz)
