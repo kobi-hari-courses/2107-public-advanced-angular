@@ -1,5 +1,9 @@
+import { Type } from '@angular/core';
 import { AfterViewInit, Component, ComponentFactoryResolver, ElementRef, EmbeddedViewRef, Injector, OnInit, Renderer2, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { ChipComponent } from './components/chip/chip.component';
+import { OptionAComponent } from './components/option-a/option-a.component';
+import { OptionBComponent } from './components/option-b/option-b.component';
+import { OptionCComponent } from './components/option-c/option-c.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +20,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('template1', {read: TemplateRef}) 
   myTemplate!: TemplateRef<any>;
 
+
+  mySelectedComponentType: Type<any> = OptionAComponent;
+
   constructor(
     private injector: Injector,
     private componentFactoryResolver: ComponentFactoryResolver,
@@ -25,6 +32,18 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   }
   ngOnInit(): void {
+    setInterval(() => {
+      const val = Math.floor(Math.random() * 3);
+
+      if (val === 0) {
+        this.mySelectedComponentType = OptionAComponent;
+      } else if (val === 1) {
+        this.mySelectedComponentType = OptionBComponent;
+      } else {
+        this.mySelectedComponentType = OptionCComponent;
+      }
+
+    }, 3000)
   }
 
   ngAfterViewInit(): void {

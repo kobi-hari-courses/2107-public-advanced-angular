@@ -15,5 +15,33 @@
   <h2 [style.color]="color">Second title</h2>
 </ng-template>
 
+<pre>
+  template outlets start here: ------>
+</pre>
+<ng-container *ngTemplateOutlet="template1; context: {$implicit: 'purple'}">
+</ng-container>
+
+<ng-container 
+  [ngTemplateOutlet]="template1"
+  [ngTemplateOutletContext]="{$implicit: 'brown'}"
+></ng-container>
+
+<pre>
+  template outlets end here: ------>
+</pre>
+
+
+<pre>
+  component outlets start here: ------>
+</pre>
+
+<ng-container *ngComponentOutlet="mySelectedComponentType">
+
+</ng-container>
+
+<pre>
+  component outlets end here: ------>
+</pre>
+
 <button (click)="addChip()">Add Chip</button>
 <button (click)="addChip('HELLO WORLD')">Add Hello chip</button>
